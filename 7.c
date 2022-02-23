@@ -11,26 +11,21 @@ int main(void)
         a[i] = get_int(" ");
     }
     int max = a[0];
-    int min = a[0];
-    int second = a[0];
+    int max2 = a[0];
     for(int i = 1; i < n; i++)
     {
         if(a[i] > max)
         {
             max = a[i];
         }
-        if(a[i] < min)
-        {
-            min = a[i];
-        }
     }
-    for(int i = 0; i < n; i++)
+    for(int i =0; i < n; i++)
     {
-        if(a[i] < max && a[i] > min)
+        if( a[i] > max2 && max > a[i])
         {
-          second = a[i];
+            max2 = a[i];
         }
     }
-        printf("Second largest element: %i\n", second);
+    printf("Second largest: %i\n", max2);
 
 }
